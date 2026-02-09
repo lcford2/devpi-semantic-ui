@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "devpi-semantic-ui"
+version = "0.3.0"
+description = "A Semantic UI theme for devpi"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "API Hackers", email = "github@apihackers.com"}
+]
+keywords = ["devpi", "semantic-ui", "theme"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+    "Environment :: Web Environment",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: System :: Software Distribution",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+    "devpi-web>=4.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/apihackers/devpi-semantic-ui"
+Issues = "https://github.com/apihackers/devpi-semantic-ui/issues"
+
+[project.entry-points.devpi_server]
+devpi-semantic-ui = "devpi_semantic_ui"
+
+[tool.setuptools]
+zip-safe = false
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["devpi_semantic_ui*"]
